@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Maly ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Serif+JP:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--cream:#f5f1ec;
+--pink:#e6c7c2;
+--brown:#8b6f5b;
+--gray:#d7d2cd;
+--dark:#4b4744;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--cream);
+font-family:'Cormorant Garamond', serif;
+color:var(--dark);
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+background:
+radial-gradient(circle at top left, var(--pink), transparent 40%),
+radial-gradient(circle at bottom right, var(--gray), transparent 40%);
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.jp{
+font-family:'Noto Serif JP', serif;
+font-size:1.2rem;
+letter-spacing:3px;
+color:var(--brown);
+}
+
+h1{
+font-size:5rem;
+font-weight:400;
+}
+
+.subtitle{
+font-size:1.4rem;
+margin-top:10px;
+}
+
+.scroll{
+margin-top:40px;
+font-size:1rem;
+opacity:.7;
+}
+
+section{
+padding:100px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+h2{
+font-size:2.5rem;
+margin-bottom:20px;
+color:var(--brown);
+}
+
+p{
+font-size:1.25rem;
+line-height:1.8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.photo{
+background:white;
+padding:10px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transform:rotate(-2deg);
+transition:.3s;
+}
+
+.photo:hover{
+transform:rotate(0deg) scale(1.03);
+}
+
+.photo img{
+width:100%;
+border-radius:10px;
+}
+
+.reason{
+padding:25px;
+margin:15px 0;
+background:#fff;
+border-left:5px solid var(--pink);
+border-radius:12px;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:var(--brown);
+color:white;
+text-decoration:none;
+border-radius:50px;
+cursor:pointer;
+}
+
+.secret{
+display:none;
+margin-top:25px;
+}
+
+footer{
+text-align:center;
+padding:80px 20px;
+font-size:1.2rem;
+}
+
+.petal{
+position:fixed;
+top:-20px;
+font-size:20px;
+animation:fall linear infinite;
+pointer-events:none;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<div class="hero-content">
+
+<div class="jp">二十二・六月</div>
+
+<h1>Maly ♡</h1>
+
+<p class="subtitle">
+Una pequeña colección de recuerdos,
+sentimientos y cosas que nunca quiero olvidar.
+</p>
+
+<div class="scroll">✿ Desliza hacia abajo ✿</div>
+
+</div>
+</div>
+
+<section>
+<div class="card">
+
+<h2>Querida Maly</h2>
+
+<p>
+Hoy es tu día.
+
+Quería darte algo que pudiera quedarse contigo,
+algo que pudieras abrir cuando quisieras recordar
+lo importante que eres para mí.
+
+Gracias por cada conversación,
+cada risa, cada momento bonito y por permitirme
+conocerte un poco más cada día.
+
+Feliz cumpleaños, mi amor.
+♡
+</p>
+
+</div>
+</section>
+
+<section>
+
+<h2>Siete razones</h2>
+
+<div class="reason">♡ Tu sonrisa.</div>
+<div class="reason">♡ Tu forma de ver el mundo.</div>
+<div class="reason">♡ Tu manera de amarme.</div>
+<div class="reason">♡ Cómo me haces sentir.</div>
+<div class="reason">♡ Tu ternura.</div>
+<div class="reason">♡ Tu fuerza.</div>
+<div class="reason">♡ Porque eres tú.</div>
+
+</section>
+
+<section>
+
+<h2>Nuestros recuerdos</h2>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="foto1.jpg">
+</div>
+
+<div class="photo">
+<img src="foto2.jpg">
+</div>
+
+<div class="photo">
+<img src="foto3.jpg">
+</div>
+
+<div class="photo">
+<img src="foto4.jpg">
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>Mensaje secreto</h2>
+
+<button class="button" onclick="mostrarMensaje()">
+Abrir cuando tengas un día difícil
+</button>
+
+<div class="secret" id="mensaje">
+
+<p>
+Si estás leyendo esto,
+quiero que recuerdes algo:
+
+Eres mucho más fuerte de lo que crees.
+Has llegado más lejos de lo que imaginas.
+
+Y aunque a veces las cosas parezcan difíciles,
+siempre habrá alguien en México pensando en ti,
+apoyándote y deseando verte feliz.
+
+♡
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="jp">ありがとう</div>
+
+<p>
+Feliz cumpleaños, Maly.
+</p>
+
+<p>
+Con amor,<br>
+Mim ♡
+</p>
+
+</footer>
+
+<script>
+
+function mostrarMensaje(){
+document.getElementById("mensaje").style.display="block";
+}
+
+for(let i=0;i<25;i++){
+
+const petal=document.createElement("div");
+petal.classList.add("petal");
+petal.innerHTML="🌸";
+
+petal.style.left=Math.random()*100+"vw";
+petal.style.animationDuration=(8+Math.random()*10)+"s";
+petal.style.opacity=Math.random();
+
+document.body.appendChild(petal);
+}
+
+</script>
+
+</body>
+</html>
